@@ -1,140 +1,325 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Política de Privacidade - Numix</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-            line-height: 1.6;
-            background-color: #ffffff;
-            color: #333333;
-        }
-        h1, h2 {
-            color: #222222;
-        }
-        ul {
-            margin-left: 20px;
-        }
-        hr {
-            margin: 30px 0;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade — PixTo</title>
+<style>
+  :root {
+    --purple: #6C3CE0;
+    --purple-dark: #5B21D6;
+    --mint: #3EEBB0;
+    --bg: #FFFFFF;
+    --surface: #F5F3FA;
+    --text: #1B1329;
+    --text-secondary: #6B6180;
+    --border: #E4DEF2;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+  header {
+    margin-bottom: 40px;
+  }
+  .badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--purple), var(--purple-dark));
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-size: 30px;
+    margin: 0 0 8px;
+    letter-spacing: -0.4px;
+  }
+  .updated {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin: 0;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 40px 0 12px;
+    padding-top: 8px;
+    border-top: 1px solid var(--border);
+    letter-spacing: -0.2px;
+  }
+  h2:first-of-type { border-top: none; padding-top: 0; }
+  h3 {
+    font-size: 16px;
+    margin: 24px 0 8px;
+  }
+  p, li { color: var(--text); font-size: 15px; }
+  ul, ol { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  .callout {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin: 16px 0;
+  }
+  .callout strong { color: var(--purple-dark); }
+  .mint-tag {
+    display: inline-block;
+    background: rgba(62, 235, 176, 0.15);
+    color: #0E7A57;
+    font-weight: 600;
+    font-size: 12.5px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th {
+    background: var(--surface);
+    font-weight: 600;
+  }
+  a { color: var(--purple-dark); }
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--text-secondary);
+    font-size: 13px;
+  }
+  code {
+    background: var(--surface);
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-size: 13px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121212;
+      --surface: #1E1E1E;
+      --text: #F3F0FA;
+      --text-secondary: #B0A6CE;
+      --border: #2A2A2A;
+    }
+    .mint-tag { color: var(--mint); background: rgba(62,235,176,0.12); }
+  }
+</style>
 </head>
 <body>
+<div class="wrap">
 
-<h1>Política de Privacidade – Numix</h1>
+  <header>
+    <span class="badge">PixTo</span>
+    <h1>Política de Privacidade</h1>
+    <p class="updated">Última atualização: 28 de julho de 2026</p>
+  </header>
 
-<p><strong>Última atualização:</strong> 15 de janeiro de 2026</p>
+  <p>
+    O <strong>PixTo</strong> é um aplicativo para Android que ajuda grupos de amigos a dividir contas
+    e gerar cobranças Pix na hora — sem cadastro, sem login e sem conta em nenhum servidor.
+    Esta política explica, de forma direta, quais dados o app usa, por que cada permissão do Android
+    é solicitada e, principalmente, o que o PixTo <strong>não</strong> faz com seus dados.
+  </p>
 
-<p>
-Esta Política de Privacidade descreve como o aplicativo <strong>Numix</strong>
-respeita a privacidade dos usuários, em conformidade com as diretrizes da Google Play.
-</p>
+  <div class="callout">
+    <strong>Resumo em uma frase:</strong> o PixTo não tem servidor, não tem conta de usuário, não coleta
+    dados pessoais, não envia nada pela internet e todas as informações ficam salvas exclusivamente
+    no seu próprio aparelho.
+  </div>
 
-<hr>
+  <h2>1. Quem somos</h2>
+  <p>
+    O PixTo é desenvolvido por <strong>FCA Developer</strong> (desenvolvedor independente).
+    Não existe backend, servidor próprio ou infraestrutura em nuvem associada ao app — todo o
+    processamento acontece localmente, no dispositivo do usuário.
+  </p>
 
-<h2>1. Coleta de informações</h2>
+  <h2>2. Sem cadastro, sem conta</h2>
+  <p>
+    O PixTo não exige e-mail, senha, número de telefone ou qualquer tipo de cadastro para funcionar.
+    Na primeira abertura, o app pede apenas o <strong>seu nome</strong> e a <strong>sua chave Pix</strong>
+    para preencher automaticamente os QR Codes que você gerar — essas informações ficam salvas
+    apenas como conveniência, direto no seu aparelho.
+  </p>
 
-<p>
-O aplicativo <strong>Numix</strong> <strong>não coleta, armazena ou compartilha nenhum dado pessoal</strong> dos usuários.
-</p>
+  <h2>3. Quais dados o app usa e onde ficam armazenados</h2>
+  <p>Os únicos dados que o PixTo processa são:</p>
+  <table>
+    <tr>
+      <th>Dado</th>
+      <th>Para que serve</th>
+      <th>Onde fica</th>
+    </tr>
+    <tr>
+      <td>Nome e chave Pix salvos</td>
+      <td>Preencher automaticamente o QR Code de cobrança</td>
+      <td>Armazenamento local do app (DataStore), no seu aparelho</td>
+    </tr>
+    <tr>
+      <td>Histórico de divisões (valor, participantes, status de pagamento)</td>
+      <td>Mostrar suas divisões recentes e marcar quem já pagou</td>
+      <td>Armazenamento local do app (DataStore/SQLite), no seu aparelho</td>
+    </tr>
+  </table>
+  <p>
+    Nenhum desses dados é enviado para servidores, nuvem, analytics ou terceiros. Não existe
+    sincronização entre dispositivos nesta versão do app — o histórico salvo em um celular não
+    aparece em outro.
+  </p>
 
-<p>O aplicativo não solicita informações como:</p>
+  <h2>4. Permissões do Android e por que cada uma é solicitada</h2>
+  <p>
+    O PixTo pede o mínimo de permissões possível, e cada uma existe apenas para viabilizar uma
+    função específica e visível do app. Nenhuma permissão é usada para coletar dados, rastrear
+    o usuário ou fins de publicidade.
+  </p>
 
-<ul>
-    <li>Nome</li>
-    <li>E-mail</li>
-    <li>Número de telefone</li>
-    <li>Localização</li>
-    <li>Identificadores do dispositivo</li>
-</ul>
+  <h3>4.1 Acesso às notificações (Notification Listener) — a permissão mais sensível</h3>
+  <span class="mint-tag">A mais importante desta política</span>
+  <p>
+    Para que o PixTo consiga <strong>detectar automaticamente quando alguém pagou a parte dela</strong>
+    (sem exigir que você abra o app do banco pra conferir manualmente), o Android exige a permissão
+    de <em>acesso a notificações</em> (<code>BIND_NOTIFICATION_LISTENER_SERVICE</code>).
+  </p>
+  <p>Veja exatamente o que essa permissão faz e não faz dentro do PixTo:</p>
+  <ul>
+    <li>
+      O app só examina notificações que chegam de uma <strong>lista fixa de aplicativos de bancos e
+      carteiras digitais brasileiros</strong> (ex.: Nubank, Itaú, Bradesco, Banco do Brasil, Caixa,
+      Inter, C6, PicPay, Mercado Pago, Santander, entre outros). Notificações de qualquer outro
+      app — WhatsApp, e-mail, redes sociais, etc. — são <strong>ignoradas e descartadas
+      imediatamente</strong>, sem leitura de conteúdo.
+    </li>
+    <li>
+      Do texto de uma notificação bancária, o app extrai apenas <strong>o nome de quem pagou e o
+      valor pago</strong>, usando reconhecimento de padrão de texto (ex.: "Você recebeu um Pix de
+      João, R$ 50,00"). Nenhum outro dado da notificação é lido, usado ou guardado.
+    </li>
+    <li>
+      Esse nome e valor são comparados, <strong>inteiramente no seu aparelho</strong>, com a divisão
+      de conta que você criou no app, para marcar automaticamente aquela pessoa como "pago".
+    </li>
+    <li>
+      O conteúdo da notificação em si <strong>nunca é armazenado, copiado ou transmitido</strong> —
+      ele é processado em memória e descartado. Só o resultado (quem pagou, quanto) fica salvo
+      localmente, junto com o histórico da divisão.
+    </li>
+    <li>
+      Nada é enviado para fora do aparelho: não há upload para servidores, não há
+      compartilhamento com o desenvolvedor, bancos, processadores de pagamento ou qualquer terceiro.
+      O PixTo não tem acesso à sua conta bancária, saldo, senha ou qualquer credencial — ele só lê
+      o texto que o próprio app do banco já exibe na barra de notificações do seu celular.
+    </li>
+  </ul>
+  <div class="callout">
+    Essa permissão é <strong>opcional</strong>: o app funciona normalmente sem ela, mas aí você
+    precisa marcar manualmente quem pagou. Você pode revogar o acesso a qualquer momento em
+    <em>Ajustes do Android → Apps → Acesso especial → Acesso a notificações</em>.
+  </div>
 
-<hr>
+  <h3>4.2 Notificações do PixTo (POST_NOTIFICATIONS)</h3>
+  <p>
+    Usada para avisar você, com uma notificação simples, quando o app detecta que alguém pagou a
+    parte dela (ou quando todo mundo já pagou). Não é usada para propaganda ou qualquer outro fim.
+  </p>
 
-<h2>2. Uso de dados</h2>
+  <h3>4.3 Ignorar otimização de bateria</h3>
+  <p>
+    Alguns fabricantes de Android encerram apps em segundo plano de forma agressiva para economizar
+    bateria. Essa permissão evita que o sistema feche o serviço de detecção de pagamentos enquanto
+    ele espera por uma notificação do banco. Também é opcional.
+  </p>
 
-<p>
-O <strong>Numix</strong> funciona totalmente <strong>offline</strong> e realiza apenas cálculos matemáticos básicos, como:
-</p>
+  <h3>4.4 Início automático (apenas aparelhos Xiaomi/MIUI)</h3>
+  <p>
+    Em aparelhos MIUI, o app pode solicitar acesso à tela de "Início automático" do sistema, que
+    garante que o serviço de detecção continue funcionando após reiniciar o celular. Essa
+    configuração é gerenciada pelo próprio sistema Xiaomi, não pelo PixTo.
+  </p>
 
-<ul>
-    <li>Adição</li>
-    <li>Subtração</li>
-    <li>Multiplicação</li>
-    <li>Divisão</li>
-</ul>
+  <h2>5. Geração do QR Code Pix</h2>
+  <p>
+    Os QR Codes de cobrança (padrão BR Code / EMV do Banco Central) são gerados
+    <strong>100% localmente, no seu aparelho</strong>, usando a biblioteca de código aberto ZXing.
+    O PixTo não se conecta a nenhuma API de banco, instituição de pagamento (PSP) ou serviço externo
+    para montar, validar ou enviar essas cobranças.
+  </p>
 
-<p>
-Nenhuma informação é enviada para servidores externos.
-</p>
+  <h2>6. Compartilhamento de dados com terceiros</h2>
+  <p>
+    O PixTo <strong>não compartilha, vende, aluga ou transmite</strong> nenhum dado a terceiros,
+    porque não há dados saindo do aparelho. O app não usa bibliotecas de analytics, publicidade,
+    rastreamento ou SDKs de terceiros que coletem dados do usuário.
+  </p>
 
-<hr>
+  <h2>7. Segurança</h2>
+  <p>
+    Como todos os dados ficam restritos ao armazenamento privado do app no seu aparelho (protegido
+    pelo próprio sistema Android), o risco de exposição é o mesmo de qualquer outro app instalado
+    no seu celular. Recomendamos manter o sistema operacional atualizado e usar bloqueio de tela
+    para proteger o acesso físico ao aparelho.
+  </p>
 
-<h2>3. Permissões</h2>
+  <h2>8. Seus direitos e como excluir seus dados</h2>
+  <p>
+    Como não existe conta nem servidor, não há dados para "solicitar exclusão" remotamente — você
+    tem controle total e imediato sobre eles, diretamente no aparelho:
+  </p>
+  <ul>
+    <li>Para apagar tudo: <em>Ajustes → Apps → PixTo → Armazenamento → Limpar dados</em>, ou
+      simplesmente desinstale o app.</li>
+    <li>Para revogar o acesso às notificações: <em>Ajustes → Apps → Acesso especial → Acesso a
+      notificações → desative o PixTo</em>.</li>
+  </ul>
 
-<p>
-O aplicativo <strong>não solicita permissões sensíveis</strong> do dispositivo,
-pois não há necessidade para seu funcionamento.
-</p>
+  <h2>9. Privacidade de crianças</h2>
+  <p>
+    O PixTo não é direcionado a menores de 13 anos e não coleta intencionalmente dados de crianças.
+    Como o app não requer cadastro nem coleta dados pessoais além do que é salvo localmente pelo
+    próprio usuário, não há mecanismo de coleta de dados infantis.
+  </p>
 
-<hr>
+  <h2>10. Alterações nesta política</h2>
+  <p>
+    Esta política pode ser atualizada caso o PixTo passe a oferecer novas funcionalidades (por
+    exemplo, sincronização em nuvem em versões futuras). Qualquer mudança relevante será refletida
+    nesta página, com a data de atualização revisada no topo.
+  </p>
 
-<h2>4. Compartilhamento de informações</h2>
+  <h2>11. Contato</h2>
+  <p>
+    Dúvidas sobre esta política ou sobre como o PixTo lida com permissões e dados podem ser
+    enviadas para: <a href="mailto:devbrfelipe@gmail.com">devbrfelipe@gmail.com</a>
+  </p>
 
-<p>
-Como nenhum dado é coletado, <strong>nenhuma informação é compartilhada com terceiros</strong>.
-</p>
+  <footer>
+    PixTo — divida a conta, pague na hora. Esta política se aplica ao aplicativo PixTo para Android
+    disponível na Google Play Store.
+  </footer>
 
-<hr>
-
-<h2>5. Segurança</h2>
-
-<p>
-Como não há coleta ou armazenamento de dados pessoais,
-<strong>não existem riscos relacionados à segurança de informações do usuário</strong>.
-</p>
-
-<hr>
-
-<h2>6. Privacidade de crianças</h2>
-
-<p>
-O aplicativo <strong>Numix</strong> é seguro para todas as idades.<br>
-Nenhum dado pessoal de crianças ou adultos é coletado.
-</p>
-
-<hr>
-
-<h2>7. Alterações nesta política</h2>
-
-<p>
-Esta Política de Privacidade pode ser atualizada ocasionalmente.
-Caso haja alterações, a versão mais recente estará sempre disponível
-junto à página do aplicativo na Google Play.
-</p>
-
-<hr>
-
-<h2>8. Contato</h2>
-
-<p>
-<strong>Desenvolvedor:</strong> FCA developer<br>
-<strong>E-mail:</strong> devbrfelipe@gmail.com
-</p>
-
-<p>
-Se você tiver qualquer dúvida sobre esta Política de Privacidade,
-entre em contato com o desenvolvedor através do e-mail informado.
-</p>
-
-<hr>
-
-<p><strong>Ao utilizar o Numix, você concorda com esta Política de Privacidade.</strong></p>
-
+</div>
 </body>
 </html>
